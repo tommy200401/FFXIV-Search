@@ -12,7 +12,7 @@ def search():
 
     # Input info
 
-    n = input('Type 1 for FC search \n Type 2 for player search.')
+    n = input('Type 1 for FC search \nType 2 for player search.')
     server, name = input('Please enter server name.'), input(
         'Please enter FC/player name.')
 
