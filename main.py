@@ -12,8 +12,9 @@ def search():
 
     # Input info
 
-    n, server, name = input('Type 1 for FC search \n Type 2 for player search.'), input(
-        'Please enter server name.'), input('Please enter FC/player name.')
+    n = input('Type 1 for FC search \n Type 2 for player search.')
+    server, name = input('Please enter server name.'), input(
+        'Please enter FC/player name.')
 
     # FC search
 
@@ -44,6 +45,7 @@ def search():
             levels = [j['Level']
                       for j in player_info['Character']['ClassJobs']]
             table = pd.DataFrame(jobs, levels)
+            table.columns = ['Jobs']
             return table
         except:
             return 'Error'
@@ -51,8 +53,7 @@ def search():
     # Error
 
     else:
-        print('Error')
-        pass
+        print('Enter a correct number.')
 
 
 search()
