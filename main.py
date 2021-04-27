@@ -1,8 +1,4 @@
-# %%
-
-# Documentation :
-
-# %%
+# %% Import library
 import pandas as pd
 import requests
 import json
@@ -14,8 +10,12 @@ import matplotlib.image as mpimg
 
 def search():
 
+    # Input info
+
     n, server, name = input('Type 1 for FC search \n Type 2 for player search.'), input(
-        'Please enter server name.'), input('Please enter player/FC name.')
+        'Please enter server name.'), input('Please enter FC/player name.')
+
+    # FC search
 
     if n == '1':
         try:
@@ -30,6 +30,9 @@ def search():
             return table
         except:
             return 'Error'
+
+    # Player search
+
     elif n == '2':
         try:
             result = requests.get(
@@ -44,6 +47,9 @@ def search():
             return table
         except:
             return 'Error'
+
+    # Error
+
     else:
         print('Error')
         pass
