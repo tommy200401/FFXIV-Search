@@ -2,8 +2,8 @@
 import pandas as pd
 import requests
 import json
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+#import matplotlib.pyplot as plt
+#import matplotlib.image as mpimg
 
 # %%
 
